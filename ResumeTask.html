@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resume in JSON</title>
+  </head>
+  <body>
+    <script>
+      /* Reusme written in JSON and parsed to array of objects*/
+
+      let resumejson =
+        '[{"introduction":[' +
+        '{"name":"Rashmi S"},' +
+        '{"phoneNumber":"9901533975"},' +
+        '{"eMail":"Rashmisudheendra1617@gamil.com"}]},' +
+        '{"experience":[' +
+        '{"totalExperience":"3.5years"},' +
+        '{"designation":"ITO Svc Delivery cons 1b","years":"1.1year"},' +
+        '{"designation":"Front end Developer","years":"1.5years"},' +
+        '{"designation":"HR Executive","years":"1.1year"},' +
+        '{"designation":"HR operations Specialist","years":"currently Working"}]},' +
+        '{"education":[' +
+        '{"Graduation":"BE Computer Science","passingyears":"2018"}]},' +
+        '{"TechnicalSkills":"MS office,Pyhton,HTML,CSS,Axure,Snow,VS Code"},' +
+        '{"personalSkills":"Communication,Quick Learner,Ambivert,self-Motivated"},' +
+        '{"personalDetails":[' +
+        '{"Maritalstatus":"Married"},' +
+        '{"Gender":"Female"},' +
+        '{"LanguagesKnown":"English" }]}]';
+      console.log(resumejson);
+      let resumeparsed = JSON.parse(resumejson);
+      console.log(resumeparsed);
+
+      /* Resume in array of objects and used stringfy function to convert to Json*/
+
+      let resume_arr_of_obj = {
+        Introduction: [
+          {
+            name: "Rashmi S",
+          },
+          { phoneNumber: "9901533975" },
+          { eMail: "Rashmisudheendra1617@gamil.com" },
+        ],
+        Experience: [
+          {
+            totalExperience: "3.5years",
+          },
+          { designation: "ITO Svc Delivery cons 1b", years: "1.1year" },
+          { designation: "Front end Developer", years: "1.5years" },
+          { designation: "HR Executive", years: "1.1year" },
+          {
+            designation: "HR operations Specialist",
+            years: "currently Working",
+          },
+        ],
+        Education: [
+          { Graduation: "BE Computer Science", passingyears: "2018" },
+        ],
+        TechnicalSkills: [
+          "MS office",
+          "Pyhton",
+          "HTML",
+          "CSS",
+          "Axure",
+          "Snow",
+          "VS Code",
+        ],
+        PersonalSkills: [
+          "Communication",
+          "Quick Learner",
+          "Ambivert",
+          "self-Motivated",
+        ],
+        PersonalDetails: [
+          { Maritalstatus: "Married" },
+          { Gender: "Female" },
+          { LanguagesKnown: "English" },
+        ],
+      };
+      console.log(resume_arr_of_obj);
+      var resumed_json = JSON.stringify(resume_arr_of_obj);
+      console.log(resumed_json);
+    </script>
+  </body>
+</html>
